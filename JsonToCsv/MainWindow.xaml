@@ -1,0 +1,26 @@
+﻿<Window x:Class="JsonToCsv.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JsonToCsv"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0">File To Convert</Label> 
+        <TextBox Grid.Row="0" Grid.Column="1" Name="TxtFileName" ></TextBox>
+        <Label Grid.Row="1" Grid.Column="0">Destination Folder</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="TxtDstFldr" ></TextBox>
+        <Button Grid.Row="2" Name="CmdGo" Grid.Column="0" Click="CmdGo_Click">go</Button>
+    </Grid>
+</Window>

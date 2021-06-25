@@ -1,0 +1,1121 @@
+{
+  "name": "SemanticModel",
+  "compatibilityLevel": 1200,
+  "model": {
+    "culture": "en-US",
+    "dataSources": [
+      {
+        "name": "SqlServer 192.168.0.22 Alteryx",
+        "connectionString": "Provider=SQLNCLI11;Data Source=192.168.0.22;Initial Catalog=Alteryx;User ID=RemoteAdmin;Persist Security Info=true",
+        "impersonationMode": "impersonateServiceAccount",
+        "annotations": [
+          {
+            "name": "ConnectionEditUISource",
+            "value": "SqlServer"
+          }
+        ]
+      }
+    ],
+    "tables": [
+      {
+        "name": "Sector",
+        "columns": [
+          {
+            "name": "SectorId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SectorId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Sector",
+            "dataType": "string",
+            "sourceColumn": "SectorDescription",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "CreatedDateUtc",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "CreatedDateUtc",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Sector",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "SELECT [SectorId]",
+                "      ,[SectorDescription]",
+                "      ,[CreatedDateUtc]",
+                "  FROM [dbo].[Dim_Sector]"
+              ],
+              "dataSource": "SqlServer 192.168.0.22 Alteryx"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [SectorId]",
+                  "      ,[SectorDescription]",
+                  "      ,[CreatedDateUtc]",
+                  "  FROM [dbo].[Dim_Sector]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT [SectorId]",
+              "      ,[SectorDescription]",
+              "      ,[CreatedDateUtc]",
+              "  FROM [dbo].[Dim_Sector]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Sector"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [SectorId]",
+              "      ,[SectorDescription]",
+              "      ,[CreatedDateUtc]",
+              "  FROM [dbo].[Dim_Sector]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Industry",
+        "columns": [
+          {
+            "name": "IndustryId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IndustryId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Industry",
+            "dataType": "string",
+            "sourceColumn": "IndustryDescription",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "CreatedDateUtc",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "CreatedDateUtc",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Industry",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "SELECT [IndustryId]",
+                "      ,[IndustryDescription]",
+                "      ,[CreatedDateUtc]",
+                "  FROM [dbo].[Dim_Industry]"
+              ],
+              "dataSource": "SqlServer 192.168.0.22 Alteryx"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [IndustryId]",
+                  "      ,[IndustryDescription]",
+                  "      ,[CreatedDateUtc]",
+                  "  FROM [dbo].[Dim_Industry]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT [IndustryId]",
+              "      ,[IndustryDescription]",
+              "      ,[CreatedDateUtc]",
+              "  FROM [dbo].[Dim_Industry]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Industry"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [IndustryId]",
+              "      ,[IndustryDescription]",
+              "      ,[CreatedDateUtc]",
+              "  FROM [dbo].[Dim_Industry]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Companies",
+        "columns": [
+          {
+            "name": "CompanyId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CompanyId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Name",
+            "dataType": "string",
+            "sourceColumn": "CompanyName",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Short Name",
+            "dataType": "string",
+            "sourceColumn": "CompanyShortName",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "CreatedDateUtc",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "CreatedDateUtc",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Companies",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "SELECT [CompanyId]",
+                "      ,[CompanyName]",
+                "      ,[CompanyShortName]",
+                "      ,[CreatedDateUtc]",
+                "  FROM [dbo].[Dim_Company]"
+              ],
+              "dataSource": "SqlServer 192.168.0.22 Alteryx"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [CompanyId]",
+                  "      ,[CompanyName]",
+                  "      ,[CompanyShortName]",
+                  "      ,[CreatedDateUtc]",
+                  "  FROM [dbo].[Dim_Company]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT [CompanyId]",
+              "      ,[CompanyName]",
+              "      ,[CompanyShortName]",
+              "      ,[CreatedDateUtc]",
+              "  FROM [dbo].[Dim_Company]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Companies"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [CompanyId]",
+              "      ,[CompanyName]",
+              "      ,[CompanyShortName]",
+              "      ,[CreatedDateUtc]",
+              "  FROM [dbo].[Dim_Company]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ticker Symbols",
+        "columns": [
+          {
+            "name": "TickerId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "TickerId",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "Symbol",
+            "dataType": "string",
+            "sourceColumn": "TickerCode",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "CreatedDateUtc",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "sourceColumn": "CreatedDateUtc",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Ticker Symbols",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "SELECT [TickerId]",
+                "      ,[TickerCode]",
+                "      ,[CreatedDateUtc]",
+                "  FROM [dbo].[Dim_Ticker]"
+              ],
+              "dataSource": "SqlServer 192.168.0.22 Alteryx"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [TickerId]",
+                  "      ,[TickerCode]",
+                  "      ,[CreatedDateUtc]",
+                  "  FROM [dbo].[Dim_Ticker]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT [TickerId]",
+              "      ,[TickerCode]",
+              "      ,[CreatedDateUtc]",
+              "  FROM [dbo].[Dim_Ticker]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Ticker Symbols"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT [TickerId]",
+              "      ,[TickerCode]",
+              "      ,[CreatedDateUtc]",
+              "  FROM [dbo].[Dim_Ticker]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stocks Daily",
+        "columns": [
+          {
+            "name": "RowId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "RowId",
+            "sourceProviderType": "BigInt"
+          },
+          {
+            "name": "TickerMapId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "TickerMapId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "MarketDate",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "Open",
+            "dataType": "decimal",
+            "sourceColumn": "OpenValue",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "sourceProviderType": "Decimal",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "High",
+            "dataType": "decimal",
+            "sourceColumn": "HighValue",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "sourceProviderType": "Decimal",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Low",
+            "dataType": "decimal",
+            "sourceColumn": "LowValue",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "sourceProviderType": "Decimal",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Volume",
+            "dataType": "int64",
+            "sourceColumn": "Volume",
+            "formatString": "#,0",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "TickerId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "TickerId",
+            "sourceProviderType": "SmallInt"
+          },
+          {
+            "name": "CompanyId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "CompanyId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "SectorId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "SectorId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "IndustryId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "IndustryId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Close",
+            "dataType": "double",
+            "sourceColumn": "CloseValue"
+          },
+          {
+            "type": "calculated",
+            "name": "Daily Change",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "[Close]-[Open]",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\" ThousandSeparator=\"True\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "type": "calculated",
+            "name": "Daily Change Rate",
+            "dataType": "double",
+            "isDataTypeInferred": true,
+            "expression": "[Daily Change]/[Open]",
+            "formatString": "0.00%;-0.00%;0.00%"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Stocks Daily",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select ",
+                "\t [RowId]\t\t\t\t= datVls.[RowId]\t\t\t",
+                "\t,[TickerMapId]\t\t\t= datVls.[TickerMapId]\t\t",
+                "\t,[MarketDate]\t\t\t= cast( datVls.[MarketDate]\t\tas date)",
+                "\t,[OpenValue]\t\t\t= datVls.[OpenValue]\t\t",
+                "\t,[CloseValue]\t\t\t= datVls.[CloseValue]\t",
+                "\t,[HighValue]\t\t\t= datVls.[HighValue]\t\t",
+                "\t,[LowValue]\t\t\t\t= datVls.[LowValue]\t\t\t",
+                "\t,[Volume]\t\t\t\t= datVls.[Volume]\t\t\t",
+                "\t,[TickerId]\t\t\t\t= mapAttr.[TickerId]\t",
+                "    ,[CompanyId]\t\t\t= mapAttr.[CompanyId]",
+                "    ,[SectorId]\t\t\t\t= mapAttr.[SectorId]\t",
+                "    ,[IndustryId]\t\t\t= mapAttr.[IndustryId]",
+                "  from ",
+                "\t[dbo].[Fact_Daily_Values] as datVls",
+                "\tinner join",
+                "\t[dbo].[Map_Ticker] as mapAttr",
+                "\t\ton datVls.TickerMapId = mapAttr.TickerMapId"
+              ],
+              "dataSource": "SqlServer 192.168.0.22 Alteryx"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select ",
+                  "\t [RowId]\t\t\t\t= datVls.[RowId]\t\t\t",
+                  "\t,[TickerMapId]\t\t\t= datVls.[TickerMapId]\t\t",
+                  "\t,[MarketDate]\t\t\t= cast( datVls.[MarketDate]\t\tas date)",
+                  "\t,[OpenValue]\t\t\t= datVls.[OpenValue]\t\t",
+                  "\t,[CloseValue]\t\t\t= datVls.[CloseValue]\t",
+                  "\t,[HighValue]\t\t\t= datVls.[HighValue]\t\t",
+                  "\t,[LowValue]\t\t\t\t= datVls.[LowValue]\t\t\t",
+                  "\t,[Volume]\t\t\t\t= datVls.[Volume]\t\t\t",
+                  "\t,[TickerId]\t\t\t\t= mapAttr.[TickerId]\t",
+                  "    ,[CompanyId]\t\t\t= mapAttr.[CompanyId]",
+                  "    ,[SectorId]\t\t\t\t= mapAttr.[SectorId]\t",
+                  "    ,[IndustryId]\t\t\t= mapAttr.[IndustryId]",
+                  "  from ",
+                  "\t[dbo].[Fact_Daily_Values] as datVls",
+                  "\tinner join",
+                  "\t[dbo].[Map_Ticker] as mapAttr",
+                  "\t\ton datVls.TickerMapId = mapAttr.TickerMapId</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "First Open Value",
+            "expression": " CALCULATE(VALUES('Stocks Daily'[Open]), SAMPLE(1,'Stocks Daily','Stocks Daily'[Date],ASC))",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Actuals",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Last Close Value",
+            "expression": "CALCULATE(VALUES('Stocks Daily'[Close]), SAMPLE(1,'Stocks Daily','Stocks Daily'[Date],DESC))",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Actuals",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Period Delta",
+            "expression": "([Last Close Value] - [First Open Value])",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Actual Change",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Period Delta Rate",
+            "expression": "DIVIDE ([Last Close Value] - [First Open Value],  [First Open Value])",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "displayFolder": "Actual Change"
+          },
+          {
+            "name": "Market Cap",
+            "expression": "[Last Close Value] * [Last Volumne]",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Actuals",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Last Volumne",
+            "expression": "CALCULATE(VALUES('Stocks Daily'[Volume]), SAMPLE(1,'Stocks Daily','Stocks Daily'[Date],DESC))",
+            "formatString": "#,0",
+            "displayFolder": "Actuals"
+          },
+          {
+            "name": "Gain Loss Scenario",
+            "expression": "[Investment Value Scenario] - [Intial Investment Scenario]",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Scenario",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Investment Value Scenario",
+            "expression": "[Last Close Value] * 'Shares Purchased'[SharesMin]",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Scenario",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Gain Loss Rate Scenario",
+            "expression": "DIVIDE([Gain Loss Scenario], [Intial Investment Scenario])",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "displayFolder": "Scenario"
+          },
+          {
+            "name": "Intial Investment Scenario",
+            "expression": "[First Open Value] * 'Shares Purchased'[SharesMin]",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Scenario",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Projected ROI",
+            "expression": "[Gain Loss Rate Scenario] * 100",
+            "formatString": "0.00",
+            "displayFolder": "Scenario"
+          },
+          {
+            "name": "Min Daily Change",
+            "expression": "MIN('Stocks Daily'[Daily Change])",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Aggerates",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Min Daily Change Rate",
+            "expression": "MIN('Stocks Daily'[Daily Change Rate])",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "displayFolder": "Aggerates"
+          },
+          {
+            "name": "Max Daily Change",
+            "expression": "MAX('Stocks Daily'[Daily Change])",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "displayFolder": "Aggerates",
+            "annotations": [
+              {
+                "name": "Format",
+                "value": "<Format Format=\"Currency\" Accuracy=\"2\"><Currency LCID=\"1033\" DisplayName=\"$ English (United States)\" Symbol=\"$\" PositivePattern=\"0\" NegativePattern=\"0\" /></Format>"
+              }
+            ]
+          },
+          {
+            "name": "Max Daily Change Rate",
+            "expression": "MAX('Stocks Daily'[Daily Change Rate])",
+            "formatString": "0.00%;-0.00%;0.00%",
+            "displayFolder": "Aggerates"
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select ",
+              "\t [RowId]\t\t\t\t= datVls.[RowId]\t\t\t",
+              "\t,[TickerMapId]\t\t\t= datVls.[TickerMapId]\t\t",
+              "\t,[MarketDate]\t\t\t= cast( datVls.[MarketDate]\t\tas date)",
+              "\t,[OpenValue]\t\t\t= datVls.[OpenValue]\t\t",
+              "\t,[CloseValue]\t\t\t= datVls.[CloseValue]\t",
+              "\t,[HighValue]\t\t\t= datVls.[HighValue]\t\t",
+              "\t,[LowValue]\t\t\t\t= datVls.[LowValue]\t\t\t",
+              "\t,[Volume]\t\t\t\t= datVls.[Volume]\t\t\t",
+              "\t,[TickerId]\t\t\t\t= mapAttr.[TickerId]\t",
+              "    ,[CompanyId]\t\t\t= mapAttr.[CompanyId]",
+              "    ,[SectorId]\t\t\t\t= mapAttr.[SectorId]\t",
+              "    ,[IndustryId]\t\t\t= mapAttr.[IndustryId]",
+              "  from ",
+              "\t[dbo].[Fact_Daily_Values] as datVls",
+              "\tinner join",
+              "\t[dbo].[Map_Ticker] as mapAttr",
+              "\t\ton datVls.TickerMapId = mapAttr.TickerMapId"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Stocks Daily"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select ",
+              "\t [RowId]\t\t\t\t= datVls.[RowId]\t\t\t",
+              "\t,[TickerMapId]\t\t\t= datVls.[TickerMapId]\t\t",
+              "\t,[MarketDate]\t\t\t= cast( datVls.[MarketDate]\t\tas date)",
+              "\t,[OpenValue]\t\t\t= datVls.[OpenValue]\t\t",
+              "\t,[CloseValue]\t\t\t= datVls.[CloseValue]\t",
+              "\t,[HighValue]\t\t\t= datVls.[HighValue]\t\t",
+              "\t,[LowValue]\t\t\t\t= datVls.[LowValue]\t\t\t",
+              "\t,[Volume]\t\t\t\t= datVls.[Volume]\t\t\t",
+              "\t,[TickerId]\t\t\t\t= mapAttr.[TickerId]\t",
+              "    ,[CompanyId]\t\t\t= mapAttr.[CompanyId]",
+              "    ,[SectorId]\t\t\t\t= mapAttr.[SectorId]\t",
+              "    ,[IndustryId]\t\t\t= mapAttr.[IndustryId]",
+              "  from ",
+              "\t[dbo].[Fact_Daily_Values] as datVls",
+              "\tinner join",
+              "\t[dbo].[Map_Ticker] as mapAttr",
+              "\t\ton datVls.TickerMapId = mapAttr.TickerMapId</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Date",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "DateId",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "DateId",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "isKey": true,
+            "sourceColumn": "StdDate",
+            "formatString": "General Date",
+            "sourceProviderType": "Date"
+          },
+          {
+            "name": "Weekend",
+            "dataType": "boolean",
+            "sourceColumn": "IsWeekend",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "sourceProviderType": "Boolean"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "YearNum",
+            "sourceProviderType": "Integer"
+          },
+          {
+            "name": "MonthNum",
+            "dataType": "int64",
+            "isHidden": true,
+            "sourceColumn": "MonthNum",
+            "sourceProviderType": "UnsignedTinyInt"
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "MonthName",
+            "sortByColumn": "MonthNum",
+            "sourceProviderType": "VarChar"
+          },
+          {
+            "name": "Quarter",
+            "dataType": "int64",
+            "sourceColumn": "QuarterNum",
+            "sourceProviderType": "UnsignedTinyInt"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Date",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "SELECT ",
+                "\t [DateId]",
+                "    ,[StdDate]",
+                "    ,[IsWeekend]",
+                "    ,[YearNum]",
+                "    ,[MonthNum]",
+                "\t,[MonthName] = datename(mm,[StdDate])",
+                "    ,[QuarterNum]",
+                "FROM ",
+                "\t[Util].[Date] as defDt",
+                "where ",
+                "\texists ",
+                "\t(",
+                "\t\tselect null ",
+                "\t\tfrom ",
+                "\t\t\t(",
+                "\t\t\t\tselect YearNum",
+                "\t\t\t\tfrom [Util].[Date] as defDt",
+                "\t\t\t\twhere exists ",
+                "\t\t\t\t\t(",
+                "\t\t\t\t\t\tselect null ",
+                "\t\t\t\t\t\tfrom ",
+                "\t\t\t\t\t\t\t[dbo].[Fact_Daily_Values] as fltDt",
+                "\t\t\t\t\t\twhere ",
+                "\t\t\t\t\t\t\tfltDt.MarketDate= defDt.[StdDate]",
+                "\t\t\t\t\t)",
+                "\t\t\t) as fltYrs",
+                "\t\twhere ",
+                "\t\t\tdefDt.YearNum = fltYrs.YearNum",
+                "\t)"
+              ],
+              "dataSource": "SqlServer 192.168.0.22 Alteryx"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+                  "\t [DateId]",
+                  "    ,[StdDate]",
+                  "    ,[IsWeekend]",
+                  "    ,[YearNum]",
+                  "    ,[MonthNum]",
+                  "\t,[MonthName] = datename(mm,[StdDate])",
+                  "    ,[QuarterNum]",
+                  "FROM ",
+                  "\t[Util].[Date] as defDt",
+                  "where ",
+                  "\texists ",
+                  "\t(",
+                  "\t\tselect null ",
+                  "\t\tfrom ",
+                  "\t\t\t(",
+                  "\t\t\t\tselect YearNum",
+                  "\t\t\t\tfrom [Util].[Date] as defDt",
+                  "\t\t\t\twhere exists ",
+                  "\t\t\t\t\t(",
+                  "\t\t\t\t\t\tselect null ",
+                  "\t\t\t\t\t\tfrom ",
+                  "\t\t\t\t\t\t\t[dbo].[Fact_Daily_Values] as fltDt",
+                  "\t\t\t\t\t\twhere ",
+                  "\t\t\t\t\t\t\tfltDt.MarketDate= defDt.[StdDate]",
+                  "\t\t\t\t\t)",
+                  "\t\t\t) as fltYrs",
+                  "\t\twhere ",
+                  "\t\t\tdefDt.YearNum = fltYrs.YearNum",
+                  "\t)</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Y-M-D",
+            "levels": [
+              {
+                "name": "Month",
+                "ordinal": 1,
+                "column": "Month"
+              },
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year"
+              },
+              {
+                "name": "Date",
+                "ordinal": 2,
+                "column": "Date"
+              }
+            ]
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "SELECT ",
+              "\t [DateId]",
+              "    ,[StdDate]",
+              "    ,[IsWeekend]",
+              "    ,[YearNum]",
+              "    ,[MonthNum]",
+              "\t,[MonthName] = datename(mm,[StdDate])",
+              "    ,[QuarterNum]",
+              "FROM ",
+              "\t[Util].[Date] as defDt",
+              "where ",
+              "\texists ",
+              "\t(",
+              "\t\tselect null ",
+              "\t\tfrom ",
+              "\t\t\t(",
+              "\t\t\t\tselect YearNum",
+              "\t\t\t\tfrom [Util].[Date] as defDt",
+              "\t\t\t\twhere exists ",
+              "\t\t\t\t\t(",
+              "\t\t\t\t\t\tselect null ",
+              "\t\t\t\t\t\tfrom ",
+              "\t\t\t\t\t\t\t[dbo].[Fact_Daily_Values] as fltDt",
+              "\t\t\t\t\t\twhere ",
+              "\t\t\t\t\t\t\tfltDt.MarketDate= defDt.[StdDate]",
+              "\t\t\t\t\t)",
+              "\t\t\t) as fltYrs",
+              "\t\twhere ",
+              "\t\t\tdefDt.YearNum = fltYrs.YearNum",
+              "\t)"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Date"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>SELECT ",
+              "\t [DateId]",
+              "    ,[StdDate]",
+              "    ,[IsWeekend]",
+              "    ,[YearNum]",
+              "    ,[MonthNum]",
+              "\t,[MonthName] = datename(mm,[StdDate])",
+              "    ,[QuarterNum]",
+              "FROM ",
+              "\t[Util].[Date] as defDt",
+              "where ",
+              "\texists ",
+              "\t(",
+              "\t\tselect null ",
+              "\t\tfrom ",
+              "\t\t\t(",
+              "\t\t\t\tselect YearNum",
+              "\t\t\t\tfrom [Util].[Date] as defDt",
+              "\t\t\t\twhere exists ",
+              "\t\t\t\t\t(",
+              "\t\t\t\t\t\tselect null ",
+              "\t\t\t\t\t\tfrom ",
+              "\t\t\t\t\t\t\t[dbo].[Fact_Daily_Values] as fltDt",
+              "\t\t\t\t\t\twhere ",
+              "\t\t\t\t\t\t\tfltDt.MarketDate= defDt.[StdDate]",
+              "\t\t\t\t\t)",
+              "\t\t\t) as fltYrs",
+              "\t\twhere ",
+              "\t\t\tdefDt.YearNum = fltYrs.YearNum",
+              "\t)</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Shares Purchased",
+        "columns": [
+          {
+            "name": "Shares",
+            "dataType": "int64",
+            "sourceColumn": "Shares",
+            "sourceProviderType": "VarChar"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Shares Purchased",
+            "dataView": "full",
+            "source": {
+              "type": "query",
+              "query": [
+                "select ",
+                "\t[Shares] = cast(defnumber.[Shares]  as int)",
+                "from ",
+                "\t(",
+                "\t\tvalues",
+                "\t\t ('0')",
+                "\t\t,('1')",
+                "\t\t,('2')",
+                "\t\t,('3')",
+                "\t\t,('4')",
+                "\t\t,('5')",
+                "\t\t,('6')",
+                "\t\t,('7')",
+                "\t\t,('8')",
+                "\t\t,('9')",
+                "\t\t,('10')",
+                "\t) as defNumber ([Shares])",
+                "order by [Shares]"
+              ],
+              "dataSource": "SqlServer 192.168.0.22 Alteryx"
+            },
+            "annotations": [
+              {
+                "name": "QueryEditorSerialization",
+                "value": [
+                  "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select ",
+                  "\t[Shares] = cast(defnumber.[Shares]  as int)",
+                  "from ",
+                  "\t(",
+                  "\t\tvalues",
+                  "\t\t ('0')",
+                  "\t\t,('1')",
+                  "\t\t,('2')",
+                  "\t\t,('3')",
+                  "\t\t,('4')",
+                  "\t\t,('5')",
+                  "\t\t,('6')",
+                  "\t\t,('7')",
+                  "\t\t,('8')",
+                  "\t\t,('9')",
+                  "\t\t,('10')",
+                  "\t) as defNumber ([Shares])",
+                  "order by [Shares]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+                ]
+              }
+            ]
+          }
+        ],
+        "measures": [
+          {
+            "name": "SharesMin",
+            "expression": "min('Shares Purchased'[Shares])",
+            "formatString": "0",
+            "isHidden": true
+          }
+        ],
+        "annotations": [
+          {
+            "name": "_TM_ExtProp_QueryDefinition",
+            "value": [
+              "select ",
+              "\t[Shares] = cast(defnumber.[Shares]  as int)",
+              "from ",
+              "\t(",
+              "\t\tvalues",
+              "\t\t ('0')",
+              "\t\t,('1')",
+              "\t\t,('2')",
+              "\t\t,('3')",
+              "\t\t,('4')",
+              "\t\t,('5')",
+              "\t\t,('6')",
+              "\t\t,('7')",
+              "\t\t,('8')",
+              "\t\t,('9')",
+              "\t\t,('10')",
+              "\t) as defNumber ([Shares])",
+              "order by [Shares]"
+            ]
+          },
+          {
+            "name": "_TM_ExtProp_DbTableName",
+            "value": "Shares Purchased"
+          },
+          {
+            "name": "QueryEditorSerialization",
+            "value": [
+              "<?xml version=\"1.0\" encoding=\"UTF-16\"?><Gemini xmlns=\"QueryEditorSerialization\"><AnnotationContent><![CDATA[<RSQueryCommandText>select ",
+              "\t[Shares] = cast(defnumber.[Shares]  as int)",
+              "from ",
+              "\t(",
+              "\t\tvalues",
+              "\t\t ('0')",
+              "\t\t,('1')",
+              "\t\t,('2')",
+              "\t\t,('3')",
+              "\t\t,('4')",
+              "\t\t,('5')",
+              "\t\t,('6')",
+              "\t\t,('7')",
+              "\t\t,('8')",
+              "\t\t,('9')",
+              "\t\t,('10')",
+              "\t) as defNumber ([Shares])",
+              "order by [Shares]</RSQueryCommandText><RSQueryCommandType>Text</RSQueryCommandType><RSQueryDesignState></RSQueryDesignState>]]></AnnotationContent></Gemini>"
+            ]
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "efe49d13-fed4-4ef7-86ea-0f301714e5d5",
+        "fromTable": "Stocks Daily",
+        "fromColumn": "CompanyId",
+        "toTable": "Companies",
+        "toColumn": "CompanyId"
+      },
+      {
+        "name": "47f857e8-a02e-4e4a-a576-a025ac7f68fd",
+        "fromTable": "Stocks Daily",
+        "fromColumn": "IndustryId",
+        "toTable": "Industry",
+        "toColumn": "IndustryId"
+      },
+      {
+        "name": "416ec332-a42c-41a8-aa19-2d8abe4e514b",
+        "fromTable": "Stocks Daily",
+        "fromColumn": "SectorId",
+        "toTable": "Sector",
+        "toColumn": "SectorId"
+      },
+      {
+        "name": "7846b233-8bee-4299-87f4-67be43a6769e",
+        "fromTable": "Stocks Daily",
+        "fromColumn": "TickerId",
+        "toTable": "Ticker Symbols",
+        "toColumn": "TickerId"
+      },
+      {
+        "name": "62ca3be1-26d4-4dc1-9279-ac85c77f46ba",
+        "fromTable": "Stocks Daily",
+        "fromColumn": "Date",
+        "toTable": "Date",
+        "toColumn": "Date"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "ClientCompatibilityLevel",
+        "value": "400"
+      }
+    ]
+  },
+  "id": "SemanticModel"
+}
